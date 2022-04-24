@@ -38,6 +38,10 @@ export class NewBlock {
      * @param proofScalar
      * @param proofVerificationHash
      * @param feeMultiplier
+     * @param totalSupply
+     * @param feeToPay
+     * @param inflation
+     * @param collectedEpochFees
      * @param previousBlockHash
      * @param blockTransactionsHash
      * @param blockReceiptsHash
@@ -92,6 +96,10 @@ export class NewBlock {
          * The feeMultiplier defined by the harvester.
          */
         public readonly feeMultiplier: number,
+        public readonly totalSupply: UInt64,
+        public readonly feeToPay: UInt64,
+        public readonly inflation: UInt64,
+        public readonly collectedEpochFees: UInt64,
         /**
          * The last block hash.
          */
