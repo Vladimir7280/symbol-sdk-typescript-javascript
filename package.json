@@ -51,13 +51,13 @@
             "email": "guillem@nemeurope.eu"
         }
     ],
-    "bugs": "https://github.com/nemtech/symbol-sdk-typescript-javascript/issues",
+    "bugs": "https://github.com/Vladimir7280/symbol-sdk-typescript-javascript/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/nemtech/symbol-sdk-typescript-javascript.git"
+        "url": "https://github.com/Vladimir7280/symbol-sdk-typescript-javascript.git"
     },
     "license": "Apache-2.0",
-    "homepage": "https://github.com/nemtech/symbol-sdk-typescript-javascript#readme",
+    "homepage": "https://github.com/Vladimir7280/symbol-sdk-typescript-javascript#readme",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "engines": {
