@@ -1,5 +1,5 @@
 {
-    "name": "symbol-sdk",
+    "name": "symbol-sdk-twix",
     "version": "2.0.1",
     "description": "Reactive symbol sdk for typescript and javascript",
     "scripts": {
