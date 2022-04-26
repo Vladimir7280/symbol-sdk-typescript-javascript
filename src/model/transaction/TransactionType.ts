@@ -167,5 +167,5 @@ export enum TransactionType {
      * @type {number}
      */
     NODE_KEY_LINK = 16972,
-    PRICE
+    PRICE = 16726,
 }
