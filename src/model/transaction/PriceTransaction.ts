@@ -1,7 +1,6 @@
 import {
     PriceTransactionBuilder,
     AmountDto,
-    EmbeddedPriceTransactionBuilder,
     EmbeddedTransactionBuilder,
     TimestampDto,
     TransactionBuilder,
@@ -102,25 +101,21 @@ export class PriceTransaction extends Transaction {
      * @returns {Transaction | InnerTransaction}
      */
     public static createFromPayload(payload: string, isEmbedded = false): Transaction | InnerTransaction {
-        const builder = isEmbedded
-            ? EmbeddedPriceTransactionBuilder.loadFromBinary(Convert.hexToUint8(payload))
-            : PriceTransactionBuilder.loadFromBinary(Convert.hexToUint8(payload));
+        const builder = PriceTransactionBuilder.loadFromBinary(Convert.hexToUint8(payload));
         const signerPublicKey = Convert.uint8ToHex(builder.getSignerPublicKey().publicKey);
         const networkType = builder.getNetwork().valueOf();
         const signature = Transaction.getSignatureFromPayload(payload, isEmbedded);
         const transaction = PriceTransaction.create(
-            isEmbedded
-                ? Deadline.createEmtpy()
-                : Deadline.createFromDTO((builder as PriceTransactionBuilder).getDeadline().timestamp),
-            isEmbedded ? new UInt64([0, 0]) : new UInt64((builder as PriceTransactionBuilder).getblockHeight()),//.blockHeight),
-            isEmbedded ? new UInt64([0, 0]) : new UInt64((builder as PriceTransactionBuilder).gethighPrice()),//.highPrice),
-            isEmbedded ? new UInt64([0, 0]) : new UInt64((builder as PriceTransactionBuilder).getlowPrice()),//.lowPrice),
+            Deadline.createFromDTO((builder as PriceTransactionBuilder).getDeadline().timestamp),
+            new UInt64((builder as PriceTransactionBuilder).getblockHeight()),//.blockHeight),
+            new UInt64((builder as PriceTransactionBuilder).gethighPrice()),//.highPrice),
+            new UInt64((builder as PriceTransactionBuilder).getlowPrice()),//.lowPrice),
             networkType,
-            isEmbedded ? new UInt64([0, 0]) : new UInt64((builder as PriceTransactionBuilder).fee.amount),
+            new UInt64((builder as PriceTransactionBuilder).fee.amount),
             signature,
             signerPublicKey.match(`^[0]+$`) ? undefined : PublicAccount.createFromPublicKey(signerPublicKey, networkType),
         );
-        return isEmbedded ? transaction.toAggregate(PublicAccount.createFromPublicKey(signerPublicKey, networkType)) : transaction;
+        return transaction;
     }
 
     /**
@@ -147,7 +142,7 @@ export class PriceTransaction extends Transaction {
      * @internal
      * @returns {EmbeddedTransactionBuilder}
      */
-    public toEmbeddedTransaction(): EmbeddedTransactionBuilder {
+    /*public toEmbeddedTransaction(): EmbeddedTransactionBuilder {
         return new EmbeddedPriceTransactionBuilder(
             this.getSignerAsBuilder(),
             this.versionToDTO(),
@@ -157,7 +152,7 @@ export class PriceTransaction extends Transaction {
             this.highPrice.toDTO(),
             this.lowPrice.toDTO(),
         );
-    }
+    }*/
 
     /**
      * @internal
