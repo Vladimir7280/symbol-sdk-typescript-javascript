@@ -86,7 +86,6 @@
         "node-fetch": "^2.6.0",
         "ripemd160": "^2.0.2",
         "rxjs": "^7.4.0",
-        "symbol-openapi-typescript-fetch-client": "^1.0.3",
         "tweetnacl": "^1.0.3",
         "utf8": "^2.1.2",
         "ws": "^7.3.1"

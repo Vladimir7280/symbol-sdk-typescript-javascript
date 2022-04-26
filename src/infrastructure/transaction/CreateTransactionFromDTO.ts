@@ -41,6 +41,7 @@ import {
     NamespaceMetadataTransaction,
     NamespaceRegistrationTransaction,
     NodeKeyLinkTransaction,
+    PriceTransaction,
     SecretLockTransaction,
     SecretProofTransaction,
     SignedTransaction,
@@ -232,6 +233,19 @@ const CreateStandaloneTransactionFromDTO = (transactionDTO, transactionInfo): Tr
                 new Mosaic(new MosaicId(transactionDTO.mosaicId), UInt64.fromNumericString(transactionDTO.amount)),
                 UInt64.fromNumericString(transactionDTO.duration),
                 new SignedTransaction('', transactionDTO.hash, '', TransactionType.AGGREGATE_BONDED, networkType),
+                signature,
+                signer,
+                transactionInfo,
+            ).setPayloadSize(transactionDTO.size);
+        case TransactionType.PRICE:
+            return new PriceTransaction(
+                networkType,
+                version,
+                deadline,
+                maxFee,
+                UInt64.fromNumericString(transactionDTO.blockHeight),
+                UInt64.fromNumericString(transactionDTO.highPrice),
+                UInt64.fromNumericString(transactionDTO.lowPrice),
                 signature,
                 signer,
                 transactionInfo,

@@ -1,5 +1,0 @@
-throttlingBurst: 35
-throttlingRate: 1000
-nemesis:
-    mosaics:
-        - accounts: 10

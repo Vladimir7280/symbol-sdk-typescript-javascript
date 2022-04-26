@@ -35,6 +35,7 @@ import {
     NamespaceMetadataTransaction,
     NamespaceRegistrationTransaction,
     NodeKeyLinkTransaction,
+    PriceTransaction,
     SecretLockTransaction,
     SecretProofTransaction,
     Transaction,
@@ -83,6 +84,13 @@ export const SerializeTransactionToJSON = (transaction: Transaction): any => {
             amount: lockFundsTransaction.mosaic.amount.toString(),
             duration: lockFundsTransaction.duration.toString(),
             hash: lockFundsTransaction.hash,
+        };
+    } else if (transaction.type === TransactionType.PRICE) {
+        const priceTransaction = transaction as PriceTransaction;
+        return {
+            blockHeight: priceTransaction.blockHeight.toString(),
+            highPrice: priceTransaction.highPrice.toString(),
+            lowPrice: priceTransaction.lowPrice.toString(),
         };
     } else if (transaction.type === TransactionType.ACCOUNT_ADDRESS_RESTRICTION) {
         const accountAddressRestrictionTx = transaction as AccountAddressRestrictionTransaction;

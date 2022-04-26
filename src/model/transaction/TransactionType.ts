@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 /**
  * Enum containing transaction type constants.
  */
@@ -168,4 +167,5 @@ export enum TransactionType {
      * @type {number}
      */
     NODE_KEY_LINK = 16972,
+    PRICE
 }

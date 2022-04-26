@@ -37,6 +37,7 @@ import {
     NamespaceMetadataTransaction,
     NamespaceRegistrationTransaction,
     NodeKeyLinkTransaction,
+    PriceTransaction,
     SecretLockTransaction,
     SecretProofTransaction,
     Transaction,
@@ -88,6 +89,8 @@ export const CreateTransactionFromPayload = (payload: string, isEmbedded = false
         return MultisigAccountModificationTransaction.createFromPayload(payload, isEmbedded);
     } else if (type === TransactionType.HASH_LOCK) {
         return LockFundsTransaction.createFromPayload(payload, isEmbedded);
+    } else if (type === TransactionType.PRICE) {
+        return PriceTransaction.createFromPayload(payload, isEmbedded);
     } else if (type === TransactionType.MOSAIC_GLOBAL_RESTRICTION) {
         return MosaicGlobalRestrictionTransaction.createFromPayload(payload, isEmbedded);
     } else if (type === TransactionType.MOSAIC_ADDRESS_RESTRICTION) {

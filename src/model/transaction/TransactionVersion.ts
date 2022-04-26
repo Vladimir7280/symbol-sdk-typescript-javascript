@@ -78,6 +78,8 @@ export class TransactionVersion {
      */
     public static readonly HASH_LOCK = 1;
 
+    public static readonly PRICE = 1;
+
     /**
      * Secret Lock transaction version
      * @type {number}

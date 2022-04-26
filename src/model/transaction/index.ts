@@ -47,3 +47,4 @@ export * from './TransactionVersion';
 export * from './TransferTransaction';
 export * from './VotingKeyLinkTransaction';
 export * from './VrfKeyLinkTransaction';
+export * from './PriceTransaction';
