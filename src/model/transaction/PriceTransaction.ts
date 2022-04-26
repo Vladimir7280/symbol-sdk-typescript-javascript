@@ -23,7 +23,7 @@ import { TransactionVersion } from './TransactionVersion';
  * In case a mosaic has the flag 'supplyMutable' set to true, the creator of the mosaic can change the supply,
  * i.e. increase or decrease the supply.
  */
-export class AddressAliasTransaction extends Transaction {
+export class PriceTransaction extends Transaction {
     /**
      * Create a address alias transaction object
      * @param deadline - The deadline to include the transaction.
@@ -34,7 +34,7 @@ export class AddressAliasTransaction extends Transaction {
      * @param maxFee - (Optional) Max fee defined by the sender
      * @param signature - (Optional) Transaction signature
      * @param signer - (Optional) Signer public account
-     * @returns {AddressAliasTransaction}
+     * @returns {PriceTransaction}
      */
     public static create(
         deadline: Deadline,
@@ -45,10 +45,10 @@ export class AddressAliasTransaction extends Transaction {
         maxFee: UInt64 = new UInt64([0, 0]),
         signature?: string,
         signer?: PublicAccount,
-    ): AddressAliasTransaction {
-        return new AddressAliasTransaction(
+    ): PriceTransaction {
+        return new PriceTransaction(
             networkType,
-            TransactionVersion.ADDRESS_ALIAS,
+            TransactionVersion.PRICE,
             deadline,
             maxFee,
             blockHeight,
@@ -108,7 +108,7 @@ export class AddressAliasTransaction extends Transaction {
         const signerPublicKey = Convert.uint8ToHex(builder.getSignerPublicKey().publicKey);
         const networkType = builder.getNetwork().valueOf();
         const signature = Transaction.getSignatureFromPayload(payload, isEmbedded);
-        const transaction = AddressAliasTransaction.create(
+        const transaction = PriceTransaction.create(
             isEmbedded
                 ? Deadline.createEmtpy()
                 : Deadline.createFromDTO((builder as PriceTransactionBuilder).getDeadline().timestamp),
@@ -174,6 +174,6 @@ export class AddressAliasTransaction extends Transaction {
      * @returns {boolean}
      */
     public shouldNotifyAccount(address: Address): boolean {
-        return super.isSigned(address) || this.address.equals(address);
+        return super.isSigned(address); //|| this.address.equals(address);
     }
 }
