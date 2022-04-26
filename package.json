@@ -7,7 +7,8 @@
         "prepack": "npm run build",
         "style:fix": "npm run create-index-files && npm run prettier && npm run lint:fix",
         "create-index-files": "cti create ./src -b -n",
-        "doc": "typedoc --out \"ts-docs/$(npm run version --silent)\" src"
+        "doc": "typedoc --out \"ts-docs/$(npm run version --silent)\" src",
+        "build": "shx rm -rf dist/ && tsc"
     },
     "pre-commit": [
         "lint"
