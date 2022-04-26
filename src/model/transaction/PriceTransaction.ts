@@ -92,7 +92,7 @@ export class PriceTransaction extends Transaction {
         signer?: PublicAccount,
         transactionInfo?: TransactionInfo,
     ) {
-        super(TransactionType.ADDRESS_ALIAS, networkType, version, deadline, maxFee, signature, signer, transactionInfo);
+        super(TransactionType.PRICE, networkType, version, deadline, maxFee, signature, signer, transactionInfo);
     }
 
     /**
