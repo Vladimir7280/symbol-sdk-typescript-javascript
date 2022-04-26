@@ -2,6 +2,7 @@ import {
     PriceTransactionBuilder,
     AmountDto,
     EmbeddedTransactionBuilder,
+    EmbeddedPriceTransactionBuilder,
     TimestampDto,
     TransactionBuilder,
 } from 'catbuffer-typescript';
@@ -131,9 +132,9 @@ export class PriceTransaction extends Transaction {
             TransactionType.PRICE.valueOf(),
             new AmountDto(this.maxFee.toDTO()),
             new TimestampDto(this.deadline.toDTO()),
-            this.blockHeight.toDTO(),
-            this.highPrice.toDTO(),
-            this.lowPrice.toDTO(),
+            new AmountDto(this.blockHeight.toDTO()),
+            new AmountDto(this.highPrice.toDTO()),
+            new AmountDto(this.lowPrice.toDTO()),
         );
         return transactionBuilder;
     }
@@ -142,7 +143,7 @@ export class PriceTransaction extends Transaction {
      * @internal
      * @returns {EmbeddedTransactionBuilder}
      */
-    /*public toEmbeddedTransaction(): EmbeddedTransactionBuilder {
+    public toEmbeddedTransaction(): EmbeddedTransactionBuilder {
         return new EmbeddedPriceTransactionBuilder(
             this.getSignerAsBuilder(),
             this.versionToDTO(),
@@ -152,7 +153,7 @@ export class PriceTransaction extends Transaction {
             this.highPrice.toDTO(),
             this.lowPrice.toDTO(),
         );
-    }*/
+    }
 
     /**
      * @internal
