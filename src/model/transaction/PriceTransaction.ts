@@ -108,9 +108,9 @@ export class PriceTransaction extends Transaction {
         const signature = Transaction.getSignatureFromPayload(payload, isEmbedded);
         const transaction = PriceTransaction.create(
             Deadline.createFromDTO((builder as PriceTransactionBuilder).getDeadline().timestamp),
-            new UInt64((builder as PriceTransactionBuilder).getblockHeight()),//.blockHeight),
-            new UInt64((builder as PriceTransactionBuilder).gethighPrice()),//.highPrice),
-            new UInt64((builder as PriceTransactionBuilder).getlowPrice()),//.lowPrice),
+            new UInt64((builder as PriceTransactionBuilder).getblockHeight().amount),//.blockHeight),
+            new UInt64((builder as PriceTransactionBuilder).gethighPrice().amount),//.highPrice),
+            new UInt64((builder as PriceTransactionBuilder).getlowPrice().amount),//.lowPrice),
             networkType,
             new UInt64((builder as PriceTransactionBuilder).fee.amount),
             signature,
