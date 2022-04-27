@@ -19,17 +19,14 @@ import { TransactionInfo } from './TransactionInfo';
 import { TransactionType } from './TransactionType';
 import { TransactionVersion } from './TransactionVersion';
 
-/**
- * In case a mosaic has the flag 'supplyMutable' set to true, the creator of the mosaic can change the supply,
- * i.e. increase or decrease the supply.
- */
+
 export class PriceTransaction extends Transaction {
     /**
      * Create a address alias transaction object
      * @param deadline - The deadline to include the transaction.
-     * @param blockHeight - The alias action type.
-     * @param highPrice - The namespace id.
-     * @param lowPrice - The address.
+     * @param blockHeight - The block the price change was registered for.
+     * @param highPrice - Highest price from the exchange since the last price transaction.
+     * @param lowPrice - Lowest price from the exchange since the last price transaction.
      * @param networkType - The network type.
      * @param maxFee - (Optional) Max fee defined by the sender
      * @param signature - (Optional) Transaction signature
@@ -77,15 +74,15 @@ export class PriceTransaction extends Transaction {
         deadline: Deadline,
         maxFee: UInt64,
         /**
-         * The alias action type.
+         * blockHeight.
          */
         public readonly blockHeight: UInt64,
         /**
-         * The namespace id that will be an alias.
+         * highPrice.
          */
         public readonly highPrice: UInt64,
         /**
-         * The address.
+         * lowPrice.
          */
         public readonly lowPrice: UInt64,
         signature?: string,
@@ -102,17 +99,21 @@ export class PriceTransaction extends Transaction {
      * @returns {Transaction | InnerTransaction}
      */
     public static createFromPayload(payload: string, isEmbedded = false): Transaction | InnerTransaction {
-        const builder = PriceTransactionBuilder.loadFromBinary(Convert.hexToUint8(payload));
+        const builder = isEmbedded
+            ? EmbeddedPriceTransactionBuilder.loadFromBinary(Convert.hexToUint8(payload))
+            : PriceTransactionBuilder.loadFromBinary(Convert.hexToUint8(payload));
         const signerPublicKey = Convert.uint8ToHex(builder.getSignerPublicKey().publicKey);
         const networkType = builder.getNetwork().valueOf();
         const signature = Transaction.getSignatureFromPayload(payload, isEmbedded);
         const transaction = PriceTransaction.create(
-            Deadline.createFromDTO((builder as PriceTransactionBuilder).getDeadline().timestamp),
+            isEmbedded
+                ? Deadline.createEmtpy()
+                : Deadline.createFromDTO((builder as PriceTransactionBuilder).getDeadline().timestamp),
             new UInt64((builder as PriceTransactionBuilder).getblockHeight().amount),
             new UInt64((builder as PriceTransactionBuilder).gethighPrice().amount),
             new UInt64((builder as PriceTransactionBuilder).getlowPrice().amount),
             networkType,
-            new UInt64((builder as PriceTransactionBuilder).fee.amount),
+            isEmbedded ? new UInt64([0, 0]) : new UInt64((builder as PriceTransactionBuilder).fee.amount),
             signature,
             signerPublicKey.match(`^[0]+$`) ? undefined : PublicAccount.createFromPublicKey(signerPublicKey, networkType),
         );
