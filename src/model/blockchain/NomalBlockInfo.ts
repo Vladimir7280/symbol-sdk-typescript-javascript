@@ -48,6 +48,7 @@ export class NormalBlockInfo {
      * @param feeToPay
      * @param inflation
      * @param collectedEpochFees
+     * @param inflationMultiplier
      * @param previousBlockHash
      * @param blockTransactionsHash
      * @param blockReceiptsHash
@@ -128,6 +129,7 @@ export class NormalBlockInfo {
         public readonly feeToPay: UInt64,
         public readonly inflation: UInt64,
         public readonly collectedEpochFees: UInt64,
+        public readonly inflationMultiplier: UInt64,
         /**
          * The last block hash.
          */

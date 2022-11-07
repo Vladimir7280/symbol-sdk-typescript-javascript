@@ -570,6 +570,7 @@ export class Listener implements IListener {
             UInt64.fromNumericString(dto.block.feeToPay),
             UInt64.fromNumericString(dto.block.inflation),
             UInt64.fromNumericString(dto.block.collectedEpochFees),
+            UInt64.fromNumericString(dto.block.inflationMultiplier),
             dto.block.previousBlockHash,
             dto.block.transactionsHash,
             dto.block.receiptsHash,
