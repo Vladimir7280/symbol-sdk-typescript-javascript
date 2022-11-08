@@ -117,7 +117,7 @@ export class BlockHttp extends Http implements BlockRepository {
             UInt64.fromNumericString(dto.block.feeToPay),
             UInt64.fromNumericString(dto.block.inflation),
             UInt64.fromNumericString(dto.block.collectedEpochFees),
-            Uint64.fromNumericString(dto.block.inflationMultiplier),
+            UInt64.fromNumericString(dto.block.inflationMultiplier),
             dto.block.previousBlockHash,
             dto.block.transactionsHash,
             dto.block.receiptsHash,
