@@ -25,7 +25,7 @@ import {
     TransactionBuilder,
     UnresolvedMosaicBuilder,
     UnresolvedMosaicIdDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { DtoMapping } from '../../core/utils';
 import { Address, PublicAccount } from '../account';

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { NodeStatusEnum } from 'symbol-openapi-typescript-fetch-client';
+import { NodeStatusEnum } from 'twix-openapi-typescript-fetch-client';
 
 /**
  * The node info structure describes basic information of a node health.

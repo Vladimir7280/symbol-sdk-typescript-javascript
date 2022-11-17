@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { FinalizationProofDTO, FinalizationRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { FinalizationProofDTO, FinalizationRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { BmTreeSignature } from '../model/finalization/BmTreeSignature';
 import { FinalizationProof } from '../model/finalization/FinalizationProof';
 import { MessageGroup } from '../model/finalization/MessageGroup';

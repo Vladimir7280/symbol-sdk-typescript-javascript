@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { AccountInfoDTO, AccountRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { AccountInfoDTO, AccountRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils';
 import { UInt64 } from '../model';
 import { AccountInfo, AccountLinkPublicKey, AccountLinkVotingKey, ActivityBucket, Address, SupplementalPublicKeys } from '../model/account';

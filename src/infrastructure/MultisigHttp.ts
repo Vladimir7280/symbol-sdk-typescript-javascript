@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { MultisigAccountInfoDTO, MultisigRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { MultisigAccountInfoDTO, MultisigRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils';
 import { Address } from '../model/account/Address';
 import { MultisigAccountGraphInfo } from '../model/account/MultisigAccountGraphInfo';

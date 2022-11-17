@@ -16,7 +16,7 @@
 
 import { Observable } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import { MosaicInfoDTO, MosaicRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { MosaicInfoDTO, MosaicRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils/DtoMapping';
 import { MerkleStateInfo } from '../model/blockchain';
 import { MosaicFlags } from '../model/mosaic/MosaicFlags';

@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { HashLockInfoDTO, HashLockRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { HashLockInfoDTO, HashLockRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils/DtoMapping';
 import { MerkleStateInfo } from '../model/blockchain/MerkleStateInfo';
 import { HashLockInfo } from '../model/lock/HashLockInfo';

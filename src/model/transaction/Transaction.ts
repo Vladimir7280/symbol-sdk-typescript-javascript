@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { EmbeddedTransactionBuilder, PublicKeyDto, SignatureDto, TransactionBuilder } from 'catbuffer-typescript';
+import { EmbeddedTransactionBuilder, PublicKeyDto, SignatureDto, TransactionBuilder } from 'twix-catbuffer-typescript';
 import { KeyPair, SHA3Hasher } from '../../core/crypto';
 import { Convert } from '../../core/format';
 import { DtoMapping } from '../../core/utils';

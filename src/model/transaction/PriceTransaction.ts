@@ -5,7 +5,7 @@ import {
     EmbeddedPriceTransactionBuilder,
     TimestampDto,
     TransactionBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { DtoMapping } from '../../core/utils';
 import { Address } from '../account/Address';

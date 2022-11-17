@@ -25,7 +25,7 @@ import {
     MosaicNonceDto,
     TimestampDto,
     TransactionBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { Address } from '../account/Address';
 import { PublicAccount } from '../account/PublicAccount';

@@ -23,7 +23,7 @@ import {
     MosaicRestrictionEntryTypeDto,
     MosaicRestrictionKeyDto,
     RestrictionRuleBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { MosaicId } from '../mosaic';
 import { UInt64 } from '../UInt64';
 import { MosaicGlobalRestrictionItem } from './MosaicGlobalRestrictionItem';

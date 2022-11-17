@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { MosaicFlagsDto } from 'catbuffer-typescript';
+import { MosaicFlagsDto } from 'twix-catbuffer-typescript';
 
 /**
  * Mosaic flags model

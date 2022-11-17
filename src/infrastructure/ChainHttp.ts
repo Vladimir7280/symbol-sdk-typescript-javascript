@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { ChainInfoDTO, ChainRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { ChainInfoDTO, ChainRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { ChainInfo } from '../model/blockchain/ChainInfo';
 import { FinalizedBlock } from '../model/blockchain/FinalizedBlock';
 import { UInt64 } from '../model/UInt64';

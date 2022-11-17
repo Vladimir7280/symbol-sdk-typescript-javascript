@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { NodeIdentityEqualityStrategy } from 'symbol-openapi-typescript-fetch-client';
+import { NodeIdentityEqualityStrategy } from 'twix-openapi-typescript-fetch-client';
 
 /**
  * Network related configuration properties.

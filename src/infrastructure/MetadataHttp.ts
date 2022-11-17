@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { MetadataInfoDTO, MetadataRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { MetadataInfoDTO, MetadataRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { Convert } from '../core/format/Convert';
 import { DtoMapping } from '../core/utils/DtoMapping';
 import { MerkleStateInfo } from '../model/blockchain';

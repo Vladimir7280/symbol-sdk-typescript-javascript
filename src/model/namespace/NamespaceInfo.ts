@@ -22,7 +22,7 @@ import {
     NamespaceLifetimeBuilder,
     NamespacePathBuilder,
     RootNamespaceHistoryBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Address } from '../account/Address';
 import { UInt64 } from '../UInt64';
 import { Alias } from './Alias';

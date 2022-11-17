@@ -16,7 +16,7 @@
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { NetworkConfigurationDTO, NetworkRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { NetworkConfigurationDTO, NetworkRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { AccountLinkNetworkProperties } from '../model/network/AccountLinkNetworkProperties';
 import { AccountRestrictionNetworkProperties } from '../model/network/AccountRestrictionNetworkProperties';
 import { AggregateNetworkProperties } from '../model/network/AggregateNetworkProperties';

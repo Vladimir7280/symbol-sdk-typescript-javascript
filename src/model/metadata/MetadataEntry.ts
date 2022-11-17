@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { MetadataEntryBuilder, MetadataValueBuilder, ScopedMetadataKeyDto } from 'catbuffer-typescript';
+import { MetadataEntryBuilder, MetadataValueBuilder, ScopedMetadataKeyDto } from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { Address } from '../account/Address';
 import { MosaicId } from '../mosaic/MosaicId';

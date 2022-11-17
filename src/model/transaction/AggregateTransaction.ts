@@ -25,7 +25,7 @@ import {
     SignatureDto,
     TimestampDto,
     TransactionBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { KeyPair, MerkleHashBuilder, SHA3Hasher } from '../../core/crypto';
 import { Convert } from '../../core/format';
 import { DtoMapping } from '../../core/utils';

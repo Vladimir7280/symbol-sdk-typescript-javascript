@@ -24,7 +24,7 @@ import {
     TimestampDto,
     TransactionBuilder,
     UnresolvedMosaicIdDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { DtoMapping } from '../../core/utils/DtoMapping';
 import { UnresolvedMapping } from '../../core/utils/UnresolvedMapping';

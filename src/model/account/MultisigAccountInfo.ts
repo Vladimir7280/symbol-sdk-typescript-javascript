@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { MultisigEntryBuilder } from 'catbuffer-typescript';
+import { MultisigEntryBuilder } from 'twix-catbuffer-typescript';
 import { Address } from './Address';
 
 /**

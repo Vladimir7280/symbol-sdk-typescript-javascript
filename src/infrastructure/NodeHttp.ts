@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { NodeInfoDTO, NodeRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { NodeInfoDTO, NodeRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { UInt64 } from '../model';
 import { StorageInfo } from '../model/blockchain';
 import { NodeHealth, NodeInfo, NodeTime, RoleType, ServerInfo } from '../model/node';

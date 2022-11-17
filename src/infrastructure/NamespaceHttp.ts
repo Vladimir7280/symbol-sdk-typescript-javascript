@@ -15,7 +15,7 @@
  */
 import { Observable } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import { NamespaceDTO, NamespaceInfoDTO, NamespaceRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { NamespaceDTO, NamespaceInfoDTO, NamespaceRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { Convert as convert, RawAddress as AddressLibrary } from '../core/format';
 import { DtoMapping } from '../core/utils/DtoMapping';
 import { AccountNames } from '../model/account/AccountNames';

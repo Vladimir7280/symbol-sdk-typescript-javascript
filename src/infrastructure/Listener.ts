@@ -16,7 +16,7 @@
 
 import { Observable, of, Subject } from 'rxjs';
 import { catchError, distinctUntilChanged, filter, map, mergeMap, share, switchMap } from 'rxjs/operators';
-import { BlockInfoDTO } from 'symbol-openapi-typescript-fetch-client';
+import { BlockInfoDTO } from 'twix-openapi-typescript-fetch-client';
 import * as WebSocket from 'ws';
 import { parseObjectProperties } from '../core/format/Utilities';
 import { DtoMapping, MultisigChildrenTreeObject, MultisigGraphUtils } from '../core/utils';

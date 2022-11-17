@@ -16,7 +16,7 @@
 
 import fetch from 'node-fetch';
 import { defer, from as observableFrom, Observable, of as observableOf } from 'rxjs';
-import { Configuration, NodeRoutesApi, Pagination, querystring } from 'symbol-openapi-typescript-fetch-client';
+import { Configuration, NodeRoutesApi, Pagination, querystring } from 'twix-openapi-typescript-fetch-client';
 import { NetworkType } from '../model/network';
 import { Page } from './Page';
 import { RepositoryCallError } from './RepositoryCallError';

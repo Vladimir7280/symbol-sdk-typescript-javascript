@@ -31,7 +31,7 @@ import {
     PinnedVotingKeyBuilder,
     PublicKeyDto,
     VotingPublicKeyDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { Mosaic, MosaicId } from '../mosaic';
 import { UInt64 } from '../UInt64';

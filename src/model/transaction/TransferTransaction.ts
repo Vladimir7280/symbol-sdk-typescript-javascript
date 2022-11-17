@@ -25,7 +25,7 @@ import {
     UnresolvedAddressDto,
     UnresolvedMosaicBuilder,
     UnresolvedMosaicIdDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import * as Long from 'long';
 import { Convert } from '../../core/format';
 import { DtoMapping, UnresolvedMapping } from '../../core/utils';

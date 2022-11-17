@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { BlockInfoDTO, BlockRoutesApi, ImportanceBlockDTO } from 'symbol-openapi-typescript-fetch-client';
+import { BlockInfoDTO, BlockRoutesApi, ImportanceBlockDTO } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils/DtoMapping';
 import { PublicAccount } from '../model/account/PublicAccount';
 import { BlockInfo } from '../model/blockchain/BlockInfo';

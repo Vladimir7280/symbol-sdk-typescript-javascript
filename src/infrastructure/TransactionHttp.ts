@@ -22,7 +22,7 @@ import {
     TransactionInfoDTO,
     TransactionPage,
     TransactionRoutesApi,
-} from 'symbol-openapi-typescript-fetch-client';
+} from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils';
 import {
     CosignatureSignedTransaction,

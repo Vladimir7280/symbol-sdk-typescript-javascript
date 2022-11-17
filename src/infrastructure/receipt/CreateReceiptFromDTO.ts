@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { ResolutionStatementInfoDTO, TransactionStatementInfoDTO } from 'symbol-openapi-typescript-fetch-client';
+import { ResolutionStatementInfoDTO, TransactionStatementInfoDTO } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../../core/utils';
 import { UnresolvedMapping } from '../../core/utils/UnresolvedMapping';
 import { Address } from '../../model/account/Address';

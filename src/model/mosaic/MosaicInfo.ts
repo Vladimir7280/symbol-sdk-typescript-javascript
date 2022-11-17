@@ -24,7 +24,7 @@ import {
     MosaicFlagsDto,
     MosaicIdDto,
     MosaicPropertiesBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Address } from '../account';
 import { UInt64 } from '../UInt64';
 import { MosaicFlags } from './MosaicFlags';

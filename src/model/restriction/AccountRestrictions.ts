@@ -21,7 +21,7 @@ import {
     AccountRestrictionsInfoBuilder,
     AccountRestrictionTransactionTypeValueBuilder,
     GeneratorUtils,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Address } from '../account';
 import { MosaicId } from '../mosaic';
 import { AccountRestriction } from './AccountRestriction';

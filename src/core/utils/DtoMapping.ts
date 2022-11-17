@@ -20,7 +20,7 @@ import {
     MerkleStateInfoDTO,
     MerkleTreeBranchDTO,
     MerkleTreeLeafDTO,
-} from 'symbol-openapi-typescript-fetch-client';
+} from 'twix-openapi-typescript-fetch-client';
 import { Address } from '../../model/account/Address';
 import { MerkleStateInfo } from '../../model/blockchain/MerkleStateInfo';
 import { MosaicId } from '../../model/mosaic/MosaicId';

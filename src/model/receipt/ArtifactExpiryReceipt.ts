@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { MosaicExpiryReceiptBuilder, NamespaceExpiryReceiptBuilder } from 'catbuffer-typescript';
+import { MosaicExpiryReceiptBuilder, NamespaceExpiryReceiptBuilder } from 'twix-catbuffer-typescript';
 import { MosaicId, UnresolvedMosaicId } from '../mosaic';
 import { NamespaceId } from '../namespace';
 import { Receipt } from './Receipt';

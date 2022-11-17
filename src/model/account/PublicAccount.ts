@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { PublicKeyDto } from 'catbuffer-typescript';
+import { PublicKeyDto } from 'twix-catbuffer-typescript';
 import { KeyPair } from '../../core/crypto';
 import { Convert } from '../../core/format';
 import { NetworkType } from '../network/NetworkType';

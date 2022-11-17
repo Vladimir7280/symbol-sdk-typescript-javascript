@@ -21,7 +21,7 @@ import {
     MosaicGlobalRestrictionDTO,
     MosaicGlobalRestrictionEntryDTO,
     RestrictionMosaicRoutesApi,
-} from 'symbol-openapi-typescript-fetch-client';
+} from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils';
 import { MerkleStateInfo, UInt64 } from '../model';
 import { MosaicId } from '../model/mosaic';

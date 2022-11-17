@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { ReceiptRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { ReceiptRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils/DtoMapping';
 import { AddressResolutionStatement, MosaicIdResolutionStatement } from '../model/receipt/ResolutionStatement';
 import { TransactionStatement } from '../model/receipt/TransactionStatement';

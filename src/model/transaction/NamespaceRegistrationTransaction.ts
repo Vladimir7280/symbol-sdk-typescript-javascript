@@ -22,7 +22,7 @@ import {
     NamespaceRegistrationTransactionBuilder,
     TimestampDto,
     TransactionBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import * as Utilities from '../../core/format/Utilities';
 import { NamespaceMosaicIdGenerator } from '../../infrastructure/transaction';

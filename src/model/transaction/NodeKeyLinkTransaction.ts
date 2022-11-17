@@ -22,7 +22,7 @@ import {
     PublicKeyDto,
     TimestampDto,
     TransactionBuilder,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { Address, PublicAccount } from '../account';
 import { NetworkType } from '../network';

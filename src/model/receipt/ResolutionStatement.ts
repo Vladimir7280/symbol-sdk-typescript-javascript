@@ -22,7 +22,7 @@ import {
     ReceiptSourceBuilder,
     UnresolvedAddressDto,
     UnresolvedMosaicIdDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { sha3_256 } from 'js-sha3';
 import { UnresolvedMapping } from '../../core/utils/UnresolvedMapping';
 import { Address } from '../account/Address';

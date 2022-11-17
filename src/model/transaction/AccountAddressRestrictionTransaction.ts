@@ -24,7 +24,7 @@ import {
     TimestampDto,
     TransactionBuilder,
     UnresolvedAddressDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { DtoMapping, UnresolvedMapping } from '../../core/utils';
 import { PublicAccount, UnresolvedAddress } from '../account';

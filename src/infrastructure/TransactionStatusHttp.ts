@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { TransactionStatusDTO, TransactionStatusRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { TransactionStatusDTO, TransactionStatusRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { Deadline } from '../model/transaction/Deadline';
 import { TransactionStatus } from '../model/transaction/TransactionStatus';
 import { UInt64 } from '../model/UInt64';

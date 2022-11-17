@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { AddressDto, AmountDto, Hash256Dto, HashLockInfoBuilder, HeightDto, MosaicBuilder } from 'catbuffer-typescript';
+import { AddressDto, AmountDto, Hash256Dto, HashLockInfoBuilder, HeightDto, MosaicBuilder } from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { Address } from '../account/Address';
 import { MosaicId } from '../mosaic/MosaicId';

@@ -23,7 +23,7 @@ import {
     MosaicRestrictionEntryBuilder,
     MosaicRestrictionEntryTypeDto,
     MosaicRestrictionKeyDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Address } from '../account';
 import { MosaicId } from '../mosaic/MosaicId';
 import { UInt64 } from '../UInt64';

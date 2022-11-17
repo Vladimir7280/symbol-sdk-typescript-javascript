@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { AmountDto, BalanceTransferReceiptBuilder, MosaicBuilder } from 'catbuffer-typescript';
+import { AmountDto, BalanceTransferReceiptBuilder, MosaicBuilder } from 'twix-catbuffer-typescript';
 import { Address } from '../account/Address';
 import { MosaicId } from '../mosaic/MosaicId';
 import { UInt64 } from '../UInt64';

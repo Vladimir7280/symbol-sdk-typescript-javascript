@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { NamespaceIdDto } from 'catbuffer-typescript';
+import { NamespaceIdDto } from 'twix-catbuffer-typescript';
 import { Convert as convert, Convert, RawAddress } from '../../core/format';
 import { NamespaceMosaicIdGenerator } from '../../infrastructure/transaction/NamespaceMosaicIdGenerator';
 import { Id } from '../Id';

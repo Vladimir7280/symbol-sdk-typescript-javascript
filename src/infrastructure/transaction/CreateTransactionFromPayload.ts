@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { EmbeddedTransactionBuilder, TransactionBuilder } from 'catbuffer-typescript';
+import { EmbeddedTransactionBuilder, TransactionBuilder } from 'twix-catbuffer-typescript';
 import { Convert as convert } from '../../core/format';
 import {
     AccountAddressRestrictionTransaction,

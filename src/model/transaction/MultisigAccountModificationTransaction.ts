@@ -22,7 +22,7 @@ import {
     TimestampDto,
     TransactionBuilder,
     UnresolvedAddressDto,
-} from 'catbuffer-typescript';
+} from 'twix-catbuffer-typescript';
 import { Convert } from '../../core/format';
 import { UnresolvedMapping } from '../../core/utils/UnresolvedMapping';
 import { PublicAccount } from '../account/PublicAccount';

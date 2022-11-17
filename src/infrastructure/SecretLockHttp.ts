@@ -15,7 +15,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { SecretLockInfoDTO, SecretLockRoutesApi } from 'symbol-openapi-typescript-fetch-client';
+import { SecretLockInfoDTO, SecretLockRoutesApi } from 'twix-openapi-typescript-fetch-client';
 import { DtoMapping } from '../core/utils';
 import { UInt64 } from '../model';
 import { MerkleStateInfo } from '../model/blockchain';
